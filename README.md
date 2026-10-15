@@ -39,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Stack
 
 - Next.js 15 (App Router) + TypeScript
-- SQLite via `better-sqlite3` (local `data/marketpulse.db`)
+- Local JSON store (`data/store.json`) for businesses + briefs
 - OpenAI SDK → Nebius Token Factory
 - Tavily Search API
 
@@ -53,7 +53,7 @@ src/
     agent.ts           # plan → Tavily → extract → synthesize
     nebius.ts          # Token Factory client
     tavily.ts          # Search helper
-    db.ts              # SQLite persistence
+    db.ts              # JSON file persistence
 ```
 
 ## Demo without live APIs

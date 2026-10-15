@@ -1,18 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
 import "./globals.css";
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  weight: ["600", "700", "800"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "MarketPulse — Weekly intel for small businesses",
@@ -27,15 +14,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${syne.variable} ${manrope.variable}`}
-        style={
-          {
-            "--font-display": "var(--font-syne), sans-serif",
-            "--font-body": "var(--font-manrope), sans-serif",
-          } as React.CSSProperties
-        }
-      >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
         <main>
           <header className="site-header">
             <a className="brand" href="/">
