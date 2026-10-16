@@ -2,7 +2,7 @@
   "name": "marketpulse",
   "version": "0.1.0",
   "private": true,
-  "description": "SME competitive intel agent — Nebius Nemotron + Tavily",
+  "description": "SME competitive intel agent - Nebius Nemotron + Tavily",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
